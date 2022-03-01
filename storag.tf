@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "2.98.0"
+    }
+  }
+}
 variable "storage_account_name" {
     type=string
     default="sasikala5295"
@@ -9,7 +17,7 @@ variable "resource_group_name" {
 }
  
 provider "azurerm"{
-version = "=2.0"
+version = "=2.98.0"
 subscription_id = "209b2c02-65a2-49fc-a09f-8a2fa48a9f50"
 tenant_id       = "e3cc7a9a-1413-484c-beff-30f5c6fdd53d"
 features {}
